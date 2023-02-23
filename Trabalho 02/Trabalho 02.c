@@ -81,8 +81,10 @@ void start_order(order *node)
 // inserir
 void insert_table_sorted(table_list *list, table *node)
 {
+
     table *aux, *new = malloc(sizeof(table));
-    if (new){
+    if (new)
+    {
         memcpy(new, node, sizeof(table));
         if (list->head == NULL)
         {
@@ -319,9 +321,210 @@ int main()
     char *menuFile = "Menu.bin";
     char *waiterFile = "Waiter.bin";
 
-    foods menu[100] = {{"Contra file",1,17,},{"Contra file com queijo branco",2,21,},{"Contra file empanado",3,19,},{"Bife a cavalo",4,19,},{"Chuleta",5,20,},{"File mignon a parmegiana",6,27,},{"File mignon grelhado",7,24,},{"File mignon com queijo branco",8,26,},{"File mignon a cavalo",9,26,},{"Picanha a brasileira",10,27,},{"File de frango",11,16,},{"File de frango a cavalo",12,18,},{"File de frango com queijo branco",13,20,},{"File de frango empanado",14,18,},{"File de frango a parmegiana",15,25,},{"Bisteca de porco",16,16,},{"Costelinha de porco",17,18},{"Costelinha de porco frita com molho barbecue",18,21,},{"Omelete",19,18,},{"Omelete recheado com batata",20,20,},{"Calabresa acebolada",21,16,},{"Salada",22,10,},{"Agua mineral sem gas",101,4.5,},{"Agua mineral com gas",102,4.5,},{"Agua tonica",103,5,},{"Suco integral (Laranja/Uva/Morango/Limao)",104,7.5,},{"Refrigerante",105,7.5,},{"Jack  Daniel's",106,20.5,},{"Johnnie Walker Black",107,23,},{"Johnnie Walker Red Label",108,19.5,},{"Vodka Smirnoff",109,11.5,},{"Dose Cachaca",110,4.5,},{"Margarita",111,17.5,},{"Whiskey Sour", 112, 26}};
+    foods menu[100] = {{
+                           "Contra file",
+                           1,
+                           17,
+                       },
+                       {
+                           "Contra file com queijo branco",
+                           2,
+                           21,
+                       },
+                       {
+                           "Contra file empanado",
+                           3,
+                           19,
+                       },
+                       {
+                           "Bife a cavalo",
+                           4,
+                           19,
+                       },
+                       {
+                           "Chuleta",
+                           5,
+                           20,
+                       },
+                       {
+                           "File mignon a parmegiana",
+                           6,
+                           27,
+                       },
+                       {
+                           "File mignon grelhado",
+                           7,
+                           24,
+                       },
+                       {
+                           "File mignon com queijo branco",
+                           8,
+                           26,
+                       },
+                       {
+                           "File mignon a cavalo",
+                           9,
+                           26,
+                       },
+                       {
+                           "Picanha a brasileira",
+                           10,
+                           27,
+                       },
+                       {
+                           "File de frango",
+                           11,
+                           16,
+                       },
+                       {
+                           "File de frango a cavalo",
+                           12,
+                           18,
+                       },
+                       {
+                           "File de frango com queijo branco",
+                           13,
+                           20,
+                       },
+                       {
+                           "File de frango empanado",
+                           14,
+                           18,
+                       },
+                       {
+                           "File de frango a parmegiana",
+                           15,
+                           25,
+                       },
+                       {
+                           "Bisteca de porco",
+                           16,
+                           16,
+                       },
+                       {
+                           "Costelinha de porco",
+                           17,
+                           18,
+                       },
+                       {
+                           "Costelinha de porco frita com molho barbecue",
+                           18,
+                           21,
+                       },
+                       {
+                           "Omelete",
+                           19,
+                           18,
+                       },
+                       {
+                           "Omelete recheado com batata",
+                           20,
+                           20,
+                       },
+                       {
+                           "Calabresa acebolada",
+                           21,
+                           16,
+                       },
+                       {
+                           "Salada",
+                           22,
+                           10,
+                       },
+                       {
+                           "Agua mineral sem gas",
+                           101,
+                           4.5,
+                       },
+                       {
+                           "Agua mineral com gas",
+                           102,
+                           4.5,
+                       },
+                       {
+                           "Agua tonica",
+                           103,
+                           5,
+                       },
+                       {
+                           "Suco integral (Laranja/Uva/Morango/Limao)",
+                           104,
+                           7.5,
+                       },
+                       {
+                           "Refrigerante",
+                           105,
+                           7.5,
+                       },
+                       {
+                           "Jack  Daniel's",
+                           106,
+                           20.5,
+                       },
+                       {
+                           "Johnnie Walker Black",
+                           107,
+                           23,
+                       },
+                       {
+                           "Johnnie Walker Red Label",
+                           108,
+                           19.5,
+                       },
+                       {
+                           "Vodka Smirnoff",
+                           109,
+                           11.5,
+                       },
+                       {
+                           "Dose Cachaca",
+                           110,
+                           4.5,
+                       },
+                       {
+                           "Margarita",
+                           111,
+                           17.5,
+                       },
+                       {"Whiskey Sour", 112, 26}};
 
-    waiter waiters[100] = {{"Lucas",101,},{"Marcos",102,},{"Daniel",103,},{"Leonardo",104,},{"Bruno",105,},{"Leticia",106,},{"Jhonathan",107,},{"Agatha",108,},{"Paulo",109,},{"Fellipe", 110}};
+    waiter waiters[100] = {{
+                               "Lucas",
+                               101,
+                           },
+                           {
+                               "Marcos",
+                               102,
+                           },
+                           {
+                               "Daniel",
+                               103,
+                           },
+                           {
+                               "Leonardo",
+                               104,
+                           },
+                           {
+                               "Bruno",
+                               105,
+                           },
+                           {
+                               "Leticia",
+                               106,
+                           },
+                           {
+                               "Jhonathan",
+                               107,
+                           },
+                           {
+                               "Agatha",
+                               108,
+                           },
+                           {
+                               "Paulo",
+                               109,
+                           },
+                           {"Fellipe", 110}};
 
     unsigned short menu_index = 34;
     unsigned short waiters_index = 10;
@@ -391,9 +594,9 @@ int main()
 
             current_table = malloc(sizeof(table));
             start_table(&current_table);
-            start_order_list(&current_table->requests);
             start_order(&current_order);
 
+            start_order_list(&current_table->requests);
 
             do
             {
@@ -789,7 +992,7 @@ int main()
             }
             printf("\nNome: ");
             fflush(stdin);
-            fgets(menu[current].name,100, stdin);
+            gets(menu[current].name);
             do
             {
                 code_equal = 0;
@@ -870,7 +1073,7 @@ int main()
             case 1:
                 printf("Novo nome: ");
                 fflush(stdin);
-                fgets(menu[position_chosen].name, 100, stdin);
+                gets(menu[position_chosen].name);
                 break;
 
             case 2:
@@ -939,7 +1142,7 @@ int main()
 
             printf("\nNome: ");
             fflush(stdin);
-            fgets(waiters[current].name, 100, stdin);
+            gets(waiters[current].name);
 
             do
             {
@@ -1016,7 +1219,7 @@ int main()
             case 1:
                 printf("Novo nome: ");
                 fflush(stdin);
-                fgets(waiters[position_chosen].name, 100, stdin);
+                gets(waiters[position_chosen].name);
                 break;
 
             case 2:
